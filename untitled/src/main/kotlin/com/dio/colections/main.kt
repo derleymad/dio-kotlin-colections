@@ -26,12 +26,20 @@ fun main(){
 
 //    val array =  Array(2) {""} // Posso declaras já com as chaves o "tipo" string
 //    array[0] = "asd"
-    var array = arrayOf(1,2)
-    array.forEachIndexed{ indice, valor -> //For eacho index, da o valor e o index
-        array[indice] += 10
-        println(valor)
-    }
-    array.forEachIndexed{indice, valor -> //
-        println(valor)
-    }
+//    var array = arrayOf(1,2)
+//    array.forEachIndexed{ indice, valor -> //For eacho index, da o valor e o index
+//        array[indice] += 10
+//        println(valor)
+//    }
+//    array.forEachIndexed{indice, valor -> //
+//        println(valor)
+//    }
+    var array = doubleArrayOf(500.0, 1000.0, 2500.0)
+    val salarioPAP= array.filter { it <= 500.0 }
+    val salarioEstagio = array.filter { it == 1000.0 }
+    val salarioJr = array.filter { it == 2500.0 }
+    println("O salário PAP = $salarioPAP, o salário do Estágio é: $salarioEstagio, e o salario Jr é : $salarioJr")
+
+    println(array.count { it in 500.0 .. 1000.0 })
+    //Tb tem o find e o Any
 }
